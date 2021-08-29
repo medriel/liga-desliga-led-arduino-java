@@ -29,4 +29,22 @@ public class FXMLDocumentController implements Initializable {
             cbPortas.getItems().add(portName.getSystemPortName());
         }
     }
+    
+    @FXML
+    private void btnConectarAction (){
+        if(btnConectar.getText().equals("Conectar")){
+            porta = SerialPort.getCommPort(cbPortas.getSelectionModel().getSelectedItem().toString());
+            if(porta.openPort()){
+                btnConectar.setText("Desconectar");
+                cbPortas.setDisable(true);
+            }
+        }else{
+            porta.closePort();
+            cbPortas.setDisable(false);
+            btnConectar.setText("Conectar");
+        }
+        System.out.println("Teste");
+    }
+    
+    
 }
