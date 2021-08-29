@@ -20,8 +20,13 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-//        carregarPortas();
+        carregarPortas();
     }    
-    
-    
+    private void carregarPortas(){
+        SerialPort[] portNames = SerialPort.getCommPorts();
+        
+        for(SerialPort portName: portNames){
+            cbPortas.getItems().add(portName.getSystemPortName());
+        }
+    }
 }
