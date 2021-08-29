@@ -11,6 +11,6 @@
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <ComboBox fx:id="cbPortas" layoutX="86.0" layoutY="38.0" prefWidth="150.0" />
       <Button fx:id="btnConectar" layoutX="129.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnConectarAction" text="Conectar" />
-      <Button layoutX="115.0" layoutY="137.0" mnemonicParsing="false" text="Ligar/Desligar" />
+      <Button layoutX="115.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnLedAction" text="Ligar/Desligar" />
     </children>
 </AnchorPane>
